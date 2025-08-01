@@ -481,4 +481,17 @@ Represents the area under the Precision-Recall curve.
 | Model Comparison             | ROC-AUC, PR-AUC        | Threshold-independent evaluation           |
 | Intervention Optimization    | Precision-Recall Curve | Find the perfect cost/benefit threshold    |
 
+# Bibliography
+
+- Bain & Company. (n.d.). *Prescription for cutting costs.* Retrieved July 18, 2025, from http://www.bain.com/Images/BB_Prescription_cutting_costs.pdf   
+-  ChargeBee. (n.d.). *What is a good ecommerce churn rate?*  Retrieved July 18, 2025, from https://www.chargebee.com/blog/ecommerce-churn-rate/#:~:text=It's%20widely%20believed%20that%20anything,and%20consider%20them%20a%20success  
+- Gupta, S., & Hanssens, D. (2009). Managing Customer Retention for Profit. Foundations and Trends in Marketing, 3(1–2), 1–96.
+- Harvard Business Review. (2014, October). *The value of keeping the right customers*. Retrieved July 18, 2025, from https://hbr.org/2014/10/the-value-of-keeping-the-right-customers
+- Khodabandehlou, S., & Rahman, M. Z. (2017). Comparison of Supervised Machine Learning Techniques for Customer Churn Prediction. Procedia Computer Science, 113, 149–156.
+- Paddle. (n.d.). *Why customers churn and how to prevent it.*  Retrieved July 18, 2025, from https://www.paddle.com/resources/churn-causes  
+- Provost, F., & Fawcett, T. (2013). Data Science for Business: What You Need to Know About Data Mining and Data-Analytic Thinking. O’Reilly Media.
+- Verma, A. (2023). *E‑commerce customer churn analysis and prediction* [Data set]. Kaggle. Retrieved July 11, 2025, from https://www.kaggle.com/datasets/ankitverma2010/ecommerce-customer-churn-analysis-and-prediction
+- Zendesk. (2020). Customer Experience Trends Report 2020. Retrieved July 19, 2025, from https://www.zendesk.com/blog/customer-churn-rate/
+- Zendesk. (2023). Customer Experience Trends Report 2023. Retrieved July 19, 2025, from https://www.zendesk.com/blog/customer-churn-rate/
+
 
