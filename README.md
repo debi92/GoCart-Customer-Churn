@@ -489,6 +489,47 @@ Represents the area under the Precision-Recall curve.
 | Model Comparison             | ROC-AUC, PR-AUC        | Threshold-independent evaluation           |
 | Intervention Optimization    | Precision-Recall Curve | Find the perfect cost/benefit threshold    |
 
+**Model & result**
+| Model                  | Accuracy | Precision | Recall  | F1 Score | F2 Score | ROC AUC | PR Score |
+|------------------------|----------|-----------|---------|----------|----------|---------|----------|
+| Logistic Regression    | 0.888988 | 0.767857  | 0.464865| 0.579125 | 0.504695 | 0.872137| 0.698114 |
+| KNN                    | 0.870337 | 0.656000  | 0.443243| 0.529032 | 0.473988 | 0.871761| 0.569488 |
+| Random Forest          | 0.977798 | 0.987805  | 0.875676| 0.928367 | 0.896018 | 0.985875| 0.970555 |
+| XGBoost                | 0.977798 | 0.970588  | 0.891892| 0.929577 | 0.906593 | 0.986064| 0.962268 |
+
+Based on the evaluation metrics presented, XGBoost delivers the best overall performance among the four models tested. It achieves the highest scores across nearly all metrics. Although Random Forest performs closely behind XGBoost, especially in F1 and ROC AUC, it slightly underperforms in recall and F2 Score.
+
+On the other hand, Logistic Regression and KNN show significantly lower recall (0.464 and 0.443), which means they fail to identify a large portion of churned customers, making them less suitable for churn detection.
+
+XGBoost is the most effective and balanced model for churn prediction in this case, demonstrating superior performance across all key metrics, especially recall and F2 score, which are crucial in scenarios where missing a churned customer is costly.
+
+XGBoost showing the best performing model overall. It achieves the highest number of true positives and the lowest number of false negatives, meaning it captures churned customers most effectively. Its performance in both classes is outstanding and confirms its top evaluation metrics. The confusion matrices further confirm that XGBoost and Random Forest significantly outperform Logistic Regression and KNN, particularly in detecting churned customers (class 1). XGBoost, in particular, is the most reliable model for minimizing both false negatives and false positives in a churn prediction scenario.
+
+### Conclusion
+
+This project successfully developed and evaluated machine learning models to predict customer churn in an e-commerce setting. After preprocessing the dataset and comparing multiple classification algorithms—including Logistic Regression, KNN, Random Forest, and XGBoost—XGBoost emerged as the best-performing model across all key metrics.
+
+- XGBoost achieved the highest accuracy (97.8%), along with superior recall, F1 score, F2 score, and ROC AUC, demonstrating strong capability in identifying churned customers.
+- The confusion matrix analysis also confirmed XGBoost’s ability to minimize both false positives and false negatives.
+- A random sample prediction and comparison to actual labels further validated the model’s effectiveness in real-world scenarios.
+
+In conclusion, the XGBoost model is highly reliable for churn prediction and can be deployed to help the business proactively retain high-risk customers.
+
+With this model (from the confusion matrix), the customer more likely to retain from 16.8% churn rate to 7.28% with the deployment scheme :
+
+#### [ Customer Transaction ] (0-15th days) ⮞⮞⮞⮞⮞ [ Churn Evaluation (XGBoost Model) ] (15th - 30th days) ⮞⮞⮞⮞⮞ [ Customer Next Order ]
+
+### Recommendation
+
+To fulfill the objective of decreasing churn rate to 7.28% from customer retain, we have to see another perspective from the business recommendation :
+
+1. With higher order count at the beginning of customer tenure, Customer Service need to maintain their relationship with the customer to make sure they have their best experience. Complain flag indicates bad experience needs to be service within 24 and needs to be clear before 48 hours. That will retain customers more effectively.
+
+2. While the higher cashback users that churned is on the first two tenures, it indicates that new customer are only using cashback for their only transaction and don't intend to extend their usage to the app. Limitiation of new customer cashback is necessary and another loyalty program to gain trust on the longer tenure churner is recommended. Subscription method for customers also has a another fresh option to gain customers who seek for more promos, discounts, and cashbacks.
+
+3. With the dominancy of Electronic Device transaction (Mobile Phones & Laptop) over than 80%, a bundling promos with their accesories is necessery to gain interest on new customer. Besides accesories, a discounts or cashbacks on daily basis for electronic devices such as Phone Credit, E-wallet top up, etc could be another solution to extend the tenure of customer.
+
+These recommendations are specificly based on the data analysr and the updated churn rate would be corrected either positive or negative throughout the customer relation process.
 # Bibliography
 
 - Bain & Company. (n.d.). *Prescription for cutting costs.* Retrieved July 18, 2025, from http://www.bain.com/Images/BB_Prescription_cutting_costs.pdf   
