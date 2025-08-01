@@ -1,3 +1,9 @@
+**Group Beta (JCDSOL-018)**
+Debi
+Eduard Jonathan B.
+
+**FINAL PROJECT - Purwadhika Data Science and Machine Learning Program**
+
 ## Ecommerce Customer Churn Analysis and Prediction Model
 
 This is a machine learning model to predict if a customer would likely to leave or stay.  
